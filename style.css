@@ -1,0 +1,253 @@
+:root {
+  --cor-1: #664101;
+  --cor-2: #CAB274;
+  --cor-3: #ECCB70;
+  --cor-4: #FFFFCD;
+  --cor-5: #FFFFFF;
+  --cor-font: #b48b58;
+
+}
+
+*{
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+@font-face {
+  font-family: "Abramo";
+  src: url("Assets/fonts/Abramo/Abramo\ Script.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("Assets/fonts/Garamond/Garamond.ttf") format("opentype");
+}
+
+html, body{
+  height: 100vh;
+  background-color: var(--cor-4);
+  font-family: "Abramo", sans-serif;
+}
+
+header,footer{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+footer{
+  z-index: 1;
+}
+
+.triangulo{
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-2);
+  clip-path: polygon(-100% 0%, 50% 50%, 200% 0%);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.caixa{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--cor-2), var(--cor-1));
+  clip-path: polygon(-50% 0%, 150% 0%, 50% 20%);
+  position: absolute;
+}
+
+.borda{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(200deg, var(--cor-3), var(--cor-2));
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 20%);
+}
+
+main{
+  width: 100%;
+  height: 3000px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: column;
+}
+
+.content{
+  width: 80%;
+  height: 100%;
+  
+  background-image: 
+  linear-gradient(
+    rgba(255, 212, 95, 0.35),
+    rgba(255, 212, 95, 0.35)
+  ),
+  url(Assets/midia/imags/background_carta.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transparente{
+  width: 100%;
+  height: 200vh;
+}
+
+.linha{
+  width: 90%;
+  height: 97%;
+  border: 2px gray solid;
+}
+
+.head{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+video {
+  width: 80%;
+  max-width: 800px;
+}
+
+.videoSectionEsquerodo, .videoSectionDireito{
+  width: 100%;
+  position: absolute;
+
+}
+
+.videoSectionDireito{
+  transform: scaleX(-1);
+  left: 0;
+}
+
+.titulo{
+  z-index: 2;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titulo > h1{
+  color: var(--cor-font);
+  font-size: 80px;
+  height: 20%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-1{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(Assets/midia/imags/Flores_cotorno.png);
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.text-1 > p{
+  font-family: "Garamond", sans-serif;
+  font-size: 25px;
+  width: 85%;
+  height: 100%;
+  text-align: center;
+  color: var(--cor-1);
+  font-weight: 700;
+}
+
+.data{
+  width: 100%;
+  height: 80px;
+}
+
+.data:hover {
+    transform: scale(1.03);
+}
+
+.topo{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.margem{
+  width: 35%;
+  height: 100%;
+  border-top: #664101 solid 2px;
+  border-bottom: #664101 solid 2px;
+}
+
+.margem > h3{
+  font-family: "Garamond", sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  color: var(--cor-1);
+  font-weight: 500;
+  text-align: center;
+  align-content: center;
+}
+
+.mes-dia{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.mes-dia > h2{
+  font-family: "Garamond", sans-serif;
+  font-size: 50px;
+  width: 100%;
+  height: 100%;
+  color: var(--cor-1);
+  font-weight: 500;
+  text-align: center;
+  align-content: center;
+}
+
+.ano{
+  width: 100%;
+  height: 40%;
+}
+
+.ano > h3{
+  font-family: "Garamond", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  color: var(--cor-1);
+  font-weight: 500;
+  text-align: center;
+  align-content: center;
+}
