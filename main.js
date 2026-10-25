@@ -42,7 +42,7 @@ window.addEventListener("scroll", () => {
 const videoEsquerdo = document.getElementById('meuVideoEsquerdo');
 const videoDireito = document.getElementById('meuVideoDireito');
 
-window.addEventListener("load", () => {
+window.addEventListener("scroll", () => {
 
   head.style.height = `${videoDireito.offsetHeight}px`;
 })
