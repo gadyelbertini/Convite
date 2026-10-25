@@ -5,6 +5,7 @@ const content = document.getElementById("content");
 
 const head = document.getElementById("head");
 const footer = document.getElementById("footer");
+const confirmar = document.getElementById("confirmar");
 
 const videoEsquerdo = document.getElementById('meuVideoEsquerdo');
 const videoDireito = document.getElementById('meuVideoDireito');
@@ -75,3 +76,44 @@ function agenda() {
 
   window.open(url, "_blank");
 }
+
+function localizacao() {
+  const latitude = -20.059085839094188;
+    const longitude = -50.53344614353074;
+
+    const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+
+    window.open(url, "_blank");
+}
+
+const popup = document.getElementById("popup");
+
+confirmar.addEventListener("click", () => {
+  popup.style.display = "flex";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
+});
+
+document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+
+  const formData = new FormData();
+  formData.append("entry.1617251236", nome);
+
+  await fetch(
+    "https://docs.google.com/forms/d/e/1FAIpQLScwpbrItxRivMqoKyk4G0jZ3Ut0g7uok4jDWjJdTtXySFTdmg/formResponse",
+    {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    }
+  );
+
+  popup.style.display = "none";
+});
