@@ -6,7 +6,12 @@ const content = document.getElementById("content");
 const head = document.getElementById("head");
 const footer = document.getElementById("footer");
 
+const videoEsquerdo = document.getElementById('meuVideoEsquerdo');
+const videoDireito = document.getElementById('meuVideoDireito');
+
 window.addEventListener("scroll", () => {
+  head.style.height = `${videoDireito.offsetHeight}px`;
+
   const scrollY = window.scrollY;
   const altura = scrollY/triangulo.offsetHeight*150;
   
@@ -38,14 +43,6 @@ window.addEventListener("scroll", () => {
     content.style.width = "100%";
   }
 });
-
-const videoEsquerdo = document.getElementById('meuVideoEsquerdo');
-const videoDireito = document.getElementById('meuVideoDireito');
-
-window.addEventListener("scroll", () => {
-
-  head.style.height = `${videoDireito.offsetHeight}px`;
-})
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
