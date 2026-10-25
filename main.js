@@ -3,6 +3,7 @@ const caixa = document.getElementById("caixa");
 const borda = document.getElementById("borda");
 const content = document.getElementById("content");
 
+const head = document.getElementById("head");
 const footer = document.getElementById("footer");
 
 window.addEventListener("scroll", () => {
@@ -15,6 +16,10 @@ window.addEventListener("scroll", () => {
   } else {
     footer.style.zIndex = "1";
     content.style.zIndex = "0";
+  }
+
+  if(content.style.width == "100%"){
+    footer.style.zIndex = "0";
   }
 
   if (altura < 100) {
@@ -37,6 +42,11 @@ window.addEventListener("scroll", () => {
 const videoEsquerdo = document.getElementById('meuVideoEsquerdo');
 const videoDireito = document.getElementById('meuVideoDireito');
 
+window.addEventListener("load", () => {
+
+  head.style.height = `${videoDireito.offsetHeight}px`;
+})
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -51,20 +61,20 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(videoEsquerdo);
 observer.observe(videoDireito);
 
-function agendar() {
-    const titulo = "Casamento de Débora e Gadyel";
-    const local = "Chácara Recanto Alegre";
-    const descricao = "Esperamos você para celebrar este momento especial!";
+function agenda() {
+  const titulo = "Casamento de Débora e Gadyel";
+  const local = "Chácara Recanto Alegre";
+  const descricao = "Esperamos você para celebrar este momento especial!";
 
-    const inicio = "20261119T180000";
-    const fim = "20261119T210000";
+  const inicio = "20261119T180000";
+  const fim = "20261119T210000";
 
-    const url =
-        "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-        "&text=" + encodeURIComponent(titulo) +
-        "&dates=" + inicio + "/" + fim +
-        "&location=" + encodeURIComponent(local) +
-        "&details=" + encodeURIComponent(descricao);
+  const url =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent(titulo) +
+    "&dates=" + inicio + "/" + fim +
+    "&location=" + encodeURIComponent(local) +
+    "&details=" + encodeURIComponent(descricao);
 
-    window.open(url, "_blank");
+  window.open(url, "_blank");
 }
