@@ -308,7 +308,7 @@ video {
   text-align: center;
   align-content: center;
   font-family: "Garamond", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--cor-1);
   font-weight: 500;
 }
@@ -336,6 +336,7 @@ video {
 .confirmar > h3{
   height: 100%;
   width: 80%;
+  font-size: 25px;
   border-top: var(--cor-1) solid 2px;
   font-weight: 700;
 }
