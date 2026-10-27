@@ -10,8 +10,11 @@ const confirmar = document.getElementById("confirmar");
 const videoEsquerdo = document.getElementById('meuVideoEsquerdo');
 const videoDireito = document.getElementById('meuVideoDireito');
 
+const qr_code = document.getElementById("qr-code");
+
 window.addEventListener("scroll", () => {
   head.style.height = `${videoDireito.offsetHeight}px`;
+  qr_code.style.height = `${qr_code.offsetWidth}px`;
 
   const scrollY = window.scrollY;
   const altura = scrollY/triangulo.offsetHeight*150;
@@ -117,3 +120,7 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
 
   popup.style.display = "none";
 });
+
+function copiarTexto() {
+    navigator.clipboard.writeText("00020126580014br.gov.bcb.pix01361d7261e9-a630-444f-a752-c6b158f711605204000053039865802BR5923GADYEL BERTINI DA SILVA6009Sao Paulo62290525REC6ADFD354614359597640236304CB5E");
+}

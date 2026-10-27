@@ -21,8 +21,15 @@
 }
 
 @font-face {
+  font-family: "Garamond Italic";
+  src: url("Assets/fonts/Garamond/EBGaramond-Italic-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: "Garamond";
-  src: url("Assets/fonts/Garamond/Garamond.ttf") format('truetype');
+  src: url("Assets/fonts/Garamond/EBGaramond-VariableFont_wght.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -187,20 +194,34 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.text-1::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
   background-image: url(Assets/midia/imags/Flores_cotorno.png);
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
+
+  opacity: 0.8;
+  z-index: 0;
 }
 
 .text-1 > p{
-  font-family: "Garamond", sans-serif;
+  position: relative;
+  z-index: 1;
+
+  font-family: "Garamond Italic", sans-serif;
   font-size: 20px;
   width: 85%;
   height: 100%;
   text-align: center;
   color: var(--cor-1);
-  font-weight: 700;
+  font-weight: 600;
   align-content: center;
 }
 
@@ -284,18 +305,18 @@ video {
 
 .links > h2{
   width: 100%;
-  height: 25%;
+  height: 40%;
   text-align: center;
   align-content: end;
   font-family: "Le Jour Script", sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 500;
   color: var(--cor-1);
 }
 
 .local{
   width: 100%;
-  height: 25%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,7 +347,7 @@ video {
 
 .confirmar{
   width: 100%;
-  height: 25%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,6 +359,7 @@ video {
   width: 80%;
   font-size: 25px;
   border-top: var(--cor-1) solid 2px;
+  border-bottom: var(--cor-1) solid 2px;
   font-weight: 700;
 }
 
@@ -357,7 +379,7 @@ video {
 .modal-conteudo {
   background-color: var(--cor-4);
   width: 80%;
-  height: 20%;
+  height: 30%;
   border-radius: 10px;
   text-align: center;
 }
@@ -396,4 +418,32 @@ video {
   border-radius: 10px;
   background-color: var(--cor-2);
   color: var(--cor-1);
+}
+
+.qr-code{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code > h3{
+  width: 100%;
+  height: 20%;
+  font-size: 20px;
+}
+
+.qr-code > img{
+  width: 60%;
+  height: 60%;
+}
+
+.data,
+.local,
+.confirmar,
+.qr-code {
+    cursor: pointer;
+    transition: filter 0.5s ease;
+    -webkit-tap-highlight-color: rgba(120, 80, 20, 0.15);
 }
