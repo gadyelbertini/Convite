@@ -14,7 +14,7 @@ const qr_code = document.getElementById("qr-code");
 
 window.addEventListener("scroll", () => {
   head.style.height = `${videoDireito.offsetHeight}px`;
-  qr_code.style.height = `${qr_code.offsetWidth}px`;
+  // qr_code.style.height = `${qr_code.offsetWidth}px`;
 
   const scrollY = window.scrollY;
   const altura = scrollY/triangulo.offsetHeight*150;
@@ -63,7 +63,7 @@ observer.observe(videoEsquerdo);
 observer.observe(videoDireito);
 
 function agenda() {
-  const titulo = "Casamento de Débora e Gadyel";
+  const titulo = "Casamento - Débora e Gadyel";
   const local = "Chácara Recanto Alegre";
   const descricao = "Esperamos você para celebrar este momento especial!";
 
@@ -81,8 +81,8 @@ function agenda() {
 }
 
 function localizacao() {
-  const latitude = -20.059085839094188;
-    const longitude = -50.53344614353074;
+  const latitude = -20.066215960307883; 
+    const longitude = -50.50598976638488;
 
     const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
@@ -121,6 +121,3 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
   popup.style.display = "none";
 });
 
-function copiarTexto() {
-    navigator.clipboard.writeText("00020126580014br.gov.bcb.pix01361d7261e9-a630-444f-a752-c6b158f711605204000053039865802BR5923GADYEL BERTINI DA SILVA6009Sao Paulo62290525REC6ADFD354614359597640236304CB5E");
-}

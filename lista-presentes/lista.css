@@ -1,0 +1,273 @@
+:root {
+  --cor-1: #664101;
+  --cor-2: #CAB274;
+  --cor-3: #ECCB70;
+  --cor-4: #FFFFCD;
+  --cor-5: #FFFFFF;
+  --cor-font: #b48b58;
+}
+
+*{
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+@font-face {
+  font-family: "Abramo";
+  src: url("./../Assets/fonts/Abramo/Abramo\ Script.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Garamond Italic";
+  src: url("Assets/fonts/Garamond/EBGaramond-Italic-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("./../Assets/fonts/Garamond/EBGaramond-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Le Jour Script";
+  src: url("./../Assets/fonts/LeJourScript/Le\ Jour\ Script\ Personal\ Use\ Only.otf") format("opentype");
+}
+
+html, body{
+	width: 100vw;
+  	height: 100vh;
+  	background-color: var(--cor-4);
+  	font-family: "Garamond", sans-serif;
+  	display: flex;
+  	justify-content: center;
+}
+
+body{
+  	max-width: 500px;
+   	background-image: 
+  	linear-gradient(
+   		rgba(255, 212, 95, 0.35),
+    	rgba(255, 212, 95, 0.35)
+  	),
+  	url(./../Assets/midia/imags/background_carta.png);
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	overflow-x: hidden;
+}
+
+.pop-up{
+	max-width: 500px;
+}
+
+.linha{
+  	width: 90%;
+	height: 95%;
+  	border: 2px gray solid;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.linha > h1{
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	align-content: center;
+	font-family: "Garamond", sans-serif;
+  	font-size: 40px;
+  	color: var(--cor-1);
+  	font-weight: 700;
+}
+
+.linha > hr{
+	width: 85%;
+	border: var(--cor-1) solid 1px;
+}
+
+.content{
+	width: 100%;
+	height: 90%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.card{
+	width: 85%;
+	height: 100px;
+	border-bottom: var(--cor-1) solid 1px;
+	display: flex;
+	align-items: center;
+}
+
+.image{
+	width: 30%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-fundo{
+	width: 85%;
+	height: 85%;
+	background-color: var(--cor-4);
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-fundo > img{
+	max-height: 90%;
+	max-width: 90%;
+}
+
+.conteudo{
+	width: 70%;
+	height: 100%;
+	text-align: center;
+	align-content: center;
+}
+
+.conteudo > p{
+	color: var(--cor-1);
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.qr-code{
+  width: 90%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code > h2{
+  width: 100%;
+  height: 70px;
+  font-size: 25px;
+  color: var(--cor-1);
+  text-align: center;
+  align-content: end;
+}
+
+.qr-code > h3{
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+  color: var(--cor-1);
+  text-align: center;
+  align-content: baseline;
+}
+
+.qr-code > img{
+	width: 80%;
+}
+
+.card,
+.qr-code {
+    cursor: pointer;
+    transition: filter 0.5s ease;
+    -webkit-tap-highlight-color: rgba(120, 80, 20, 0.15);
+}
+
+.pop-up{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	display: none;
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+}
+
+.fundo{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(20, 20, 20, 0.5);
+	position: fixed;
+	z-index: 3;
+}
+
+.car{
+	width: 80vw;
+	height: 60vh;
+	background-color: var(--cor-3);
+	z-index: 4;
+	border-radius: 20px;
+}
+
+.imgg{
+	width: 100%;
+	height: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.imggg{
+	width: 90%;
+	height: 90%;
+	background-color: var(--cor-4);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.imggg > img{
+	max-width: 95%;
+	max-height: 95%;
+}
+
+.infos{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.infos > h2{
+	width: 95%;
+	height: 45%;
+	text-align: center;
+	align-content: center;
+	color: var(--cor-1);
+	font-family: "Garamond", sans-serif;
+	font-size: 30px;
+	background-color: var(--cor-4);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.infos > h3{
+	width: 95%;
+	height: 45%;
+	text-align: center;
+	align-content: center;
+	color: var(--cor-1);
+	font-family: "Garamond", sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	text-decoration: none;
+	background-color: var(--cor-4);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: var(--cor-1) solid 1px;
+}
