@@ -37,7 +37,10 @@ async function carregarItens() {
             .then(r => r.json());
 
         renderizarItens(
-            itens.filter(item => item.presente)
+            itens.filter(item => 
+				item.presente === true &&
+                item.adquirido === false
+			)
         );
 
     } catch (erro) {
