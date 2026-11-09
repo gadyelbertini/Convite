@@ -50,6 +50,8 @@ async function carregarItens() {
 
 carregarItens();
 
+setInterval(carregarItens, 5000);
+
 function copiarTexto() {
     navigator.clipboard.writeText("00020126580014br.gov.bcb.pix01361d7261e9-a630-444f-a752-c6b158f711605204000053039865802BR5923GADYEL BERTINI DA SILVA6009Sao Paulo62290525REC6ADFD354614359597640236304CB5E");
 }
